@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="lead">
+          {% if imgbefore %}
+            {{ message }}
+          {% else %}
+            {{ message }}
+          {% endif %}
+        </p>
+        <form action="/post" method="post" class="form-inline" enctype = "multipart/form-data">
+          <input type="file" name="file" placeholder="file"/>
+          <button type="upload">upload</button>
+        </form>
+        {% if imgbefore %}
+          {% if label == "dog" %}
+            <img src= {{imgbefore}} alt="Uploaded Image"><br>
+            {{comment}}
+            {{dogbreed}} <br>
+          {% elif label == "human" %}
+            <img src= {{imgbefore}} alt="Uploaded Image"><br>
+            {{comment}}
+            {{dogbreed}} <br>
+            <h7> Let's transform her/him to a dog! </h7> <br>
+            <img src= {{imgafter}} alt="Dog Earred Image"><br>
+          {% else %}
+            <img src= {{imgbefore}} alt="Uploaded Image"><br>
+            {{comment}}
+          {% endif %}
+        {% endif %}
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
