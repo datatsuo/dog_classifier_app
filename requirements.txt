@@ -1,6 +1,6 @@
 tqdm==4.19.5
 Werkzeug==0.12.2
-opencv_python==3.3.1.11
+opencv_python==3.4.0.12
 numpy==1.13.3
 Flask==0.12.2
 tensorflow_gpu==0.12.1
